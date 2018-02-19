@@ -5,8 +5,7 @@ module.exports = function (controller) {
         bot.startConversation(message, function (err, convo) {
             convo.say('Create a ticket');
 
-            convo.ask('What is your ticket about?', function (response, convo) 
-            {
+            convo.ask('What is your ticket about?', function (response, convo) {
                 convo.say('ticket about' + response.text + ' is created!');
                 convo.next();
             });
